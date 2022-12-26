@@ -1,0 +1,93 @@
+-------------------------
+-- Populate Cities table
+-------------------------
+INSERT INTO Cities(city_name, zip, city_state)
+VALUES('Vinson', 73571, 'OK');
+INSERT INTO Cities(city_name, zip, city_state)
+VALUES('Phoenix', 85015, 'AZ');
+INSERT INTO Cities(city_name, zip, city_state)
+VALUES('Lake Charles', 70629, 'LA');
+INSERT INTO Cities(city_name, zip, city_state)
+VALUES('Mesa', 85206, 'AZ');
+INSERT INTO Cities(city_name, zip, city_state)
+VALUES('Graham', 32042, 'FL');
+INSERT INTO Cities(city_name, zip, city_state)
+VALUES('Washington', 20535, 'DC');
+
+---------------------------
+-- Populate Customers table
+---------------------------
+INSERT INTO Customers(cust_id, full_name, city_name, email)
+VALUES(60124, 'Titus, Jani', 'Vinson', 'jani.titus@gmail.com');
+INSERT INTO Customers(cust_id, full_name, city_name, email)
+VALUES(31655, 'Mayo, Lauran', 'Phoenix', 'lauran.mayo@gmail.com');
+INSERT INTO Customers(cust_id, full_name, city_name, email)
+VALUES(6702, 'Roach, Skye', 'Lake Charles', 'skye.roach@outlook.com');
+INSERT INTO Customers(cust_id, full_name, city_name, email)
+VALUES(60115, 'Swofford, Veola', 'Mesa', 'veola.swofford@walmart.com');
+INSERT INTO Customers(cust_id, full_name, city_name, email)
+VALUES(42485, 'Eaker, Lee', 'Graham', 'lee.eaker@gmail.com');
+INSERT INTO Customers(cust_id, full_name, city_name, email)
+VALUES(60111, 'Pancoast, Jaimie', 'Washington', 'jaimie.pancoast@shell.com');
+INSERT INTO Customers(cust_id, full_name, city_name, email)
+VALUES(16163, 'Avila, Renato', 'Washington', 'renato.avila@btinternet.com');
+
+
+--------------------------
+-- Populate Products table
+--------------------------
+INSERT INTO Products(sku, category, price)
+VALUES('oasis_Oasis-064-36', 'Men`s Fashion', 89.9);
+INSERT INTO Products(sku, category, price)
+VALUES('APPLIO59BA25191179A', 'Appliances', 199.9);
+INSERT INTO Products(sku, category, price)
+VALUES('MATBIS59ACAAF2C617C', 'Mobiles & Tablets', 19.9);
+INSERT INTO Products(sku, category, price)
+VALUES('HASONC59AC64DFADA78', 'Health & Sports', 75.0);
+INSERT INTO Products(sku, category, price)
+VALUES('APPHED59D47BB72D66F', 'Appliances', 54.9);
+INSERT INTO Products(sku, category, price)
+VALUES('MEFREL59AC079AE6C6F-L', 'Men`s Fashion', 22.5);
+
+
+------------------------
+-- Populate Orders table
+------------------------
+INSERT INTO Orders(order_id, status, cust_id)
+VALUES(100362846, 'canceled', 60124);
+INSERT INTO Orders(order_id, status, cust_id)
+VALUES(100545337, 'complete', 31655);
+INSERT INTO Orders(order_id, status, cust_id)
+VALUES(100383230, 'received', 6702);
+INSERT INTO Orders(order_id, status, cust_id)
+VALUES(100469652, 'received', 31655);
+INSERT INTO Orders(order_id, status, cust_id)
+VALUES(100389916, 'canceled', 60115);
+INSERT INTO Orders(order_id, status, cust_id)
+VALUES(100535493, 'received', 42485);
+
+----------------------------
+-- Populate OrderItems table
+----------------------------
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(574772, 100362846, 'oasis_Oasis-064-36', 21, 1798.0);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(657777, 100362846, 'MEFREL59AC079AE6C6F-L', 2, 22.5);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(578022, 100545337, 'HASONC59AC64DFADA78', 33, 125.99);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(582836, 100383230, 'MEFREL59AC079AE6C6F-L', 41, 1800.0);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(574777, 100383230, 'APPHED59D47BB72D66F', 9, 47.39);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(657548, 100383230, 'MATBIS59ACAAF2C617C', 19, 100.5);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(885560, 100469652, 'oasis_Oasis-064-36', 20, 29.49);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(574810, 100469652, 'MATBIS59ACAAF2C617C', 11, 32.49);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(574809, 100469652, 'MEFREL59AC079AE6C6F-L', 63, 2000.49);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(599491, 100389916, 'APPHED59D47BB72D66F', 31, 60.99);
+INSERT INTO OrderItems(item_id, order_id, sku, qty_ordered, total)
+VALUES(599812, 100535493, 'HASONC59AC64DFADA78', 24, 103.59);
